@@ -19,7 +19,7 @@ export const AddCategory = ({ setCategories }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label for="search">Search</label>
+            <label htmlFor="search">Search</label>
             <input 
                 id="search"
                 type="text"
