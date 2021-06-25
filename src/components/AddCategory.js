@@ -5,7 +5,10 @@ export const AddCategory = ({ setCategories }) => {
 
     const [inputValue, setInputValue] = useState("")
     const handleInputChange = e =>{
+
         setInputValue(e.target.value)
+
+        console.log('handleInputChange llamado')
     }
 
     const handleSubmit = e =>{
@@ -20,6 +23,7 @@ export const AddCategory = ({ setCategories }) => {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="search">Search</label>
+            <p>{inputValue}</p>
             <input 
                 id="search"
                 type="text"

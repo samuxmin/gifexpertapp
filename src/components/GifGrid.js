@@ -5,7 +5,12 @@ import { GifGridItem } from './GifGridItem';
 export const GifGrid = ({category}) => {
 
     const {data:images, loading } = useFetchGifs(category);
-
+     if(!loading && images.length === 0){
+        return <>
+        <h3 className="animate_animated animate__fadeInUp">{ category }</h3>
+        <p>No se encontraron gifs para la categoría: <i>{category}</i></p>
+        </>
+    }
 
 
     return (
